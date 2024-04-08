@@ -1,0 +1,27 @@
+.burger-button {
+  position: relative;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  display: none;
+
+  &::after {
+    content: url(../image/MenuFilled.svg);
+  }
+
+  @include breakpoint(medium) {
+    display: block;
+    margin-right: 1%;
+  }
+
+  @include breakpoint(small) {
+    display: block;
+    margin-right: 1%;
+  }
+
+  @include breakpoint(extra-small) {
+    display: block;
+    margin-left: 25%;
+  }
+}

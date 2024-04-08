@@ -1,0 +1,22 @@
+$color-grey: #666666;
+$color-grey-alt: #3e3e3e;
+$color-light: #ffffff;
+$color-light-alt: #fbfbfb;
+$color-blue: #0b457f;
+$color-dark: #00000026;
+
+@mixin breakpoint($point) {
+  @if $point == medium {
+    @media (min-width: 901px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: 900px) and (min-width: 601px) {
+      @content;
+    }
+  } @else if $point == extra-small {
+    @media (max-width: 600px) and (min-width: 444px) {
+      @content;
+    }
+  }
+}

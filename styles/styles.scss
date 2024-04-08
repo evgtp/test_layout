@@ -1,0 +1,665 @@
+@import "variables", "fonts", "globals";
+
+@import "burger-button", "header", "cross-button", "mobile-overlay";
+
+.content {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(medium) {
+    width: 856px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(small) {
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(extra-small) {
+    width: 335px;
+  }
+}
+
+.main {
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+      width: 856px !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint(small) {
+      width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint(extra-small) {
+      width: 335px;
+    }
+  }
+
+  #main__services-data {
+    position: absolute;
+    z-index: 100;
+  }
+
+  &__title {
+    margin-top: 56px;
+    margin-bottom: 32px;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #3e3e3e;
+
+    @include breakpoint(medium) {
+      width: 603px;
+    }
+
+    @include breakpoint(small) {
+      width: 603px;
+    }
+
+    @include breakpoint(extra-small) {
+      margin-top: 36px;
+      margin-bottom: 24px;
+      width: 335px;
+      font-size: 16px;
+      line-height: 19.36px;
+    }
+  }
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(3, 424px);
+    grid-template-rows: repeat(2, 250px);
+    row-gap: 12px;
+    column-gap: 12px;
+    grid-template-areas:
+      "diagnostics show grading"
+      "diagnostics reservation grading";
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 420px);
+      grid-template-rows: repeat(2, 233px);
+      row-gap: 12px;
+      column-gap: 12px;
+      grid-template-areas:
+        "diagnostics show"
+        "reservation grading";
+    }
+
+    @include breakpoint(small) {
+      grid-template-columns: repeat(1, 680px);
+      grid-template-rows: repeat(4, 233px);
+      column-gap: 12px;
+      grid-template-areas:
+        "diagnostics"
+        "show"
+        "reservation"
+        "grading";
+    }
+
+    @include breakpoint(extra-small) {
+      grid-template-columns: repeat(1, 335px);
+      grid-template-rows: repeat(4, 194px);
+      column-gap: 12px;
+      grid-template-areas:
+        "diagnostics"
+        "show"
+        "reservation"
+        "grading";
+    }
+
+    &-title {
+      width: 338px;
+
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #ffffff;
+
+      padding: 32px 0 12px 32px;
+
+      @include breakpoint(small) {
+        width: 270px;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 32px 0 8px 32px;
+      }
+
+      @include breakpoint(extra-small) {
+        width: 227px;
+        font-size: 16px;
+        margin: 16px 0 8px 16px;
+        padding: 0;
+      }
+    }
+
+    &-info {
+      width: 295px;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      color: #ffffff;
+
+      margin-left: 32px;
+
+      @include breakpoint(extra-small) {
+        margin-left: 16px;
+      }
+    }
+
+    &-bgi {
+      position: absolute;
+      width: 400px;
+      height: 192px;
+      top: 307px;
+      left: 12px;
+    }
+
+    &-diagnostics {
+      grid-area: diagnostics;
+      width: 424px;
+      height: 512px;
+
+      position: relative;
+
+      margin-right: 12px;
+
+      background: url(../image/bgc_diagnostics.png);
+
+      @include breakpoint(medium) {
+        width: 420px;
+        height: 233px;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(small) {
+        width: 680px;
+        height: 233px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(extra-small) {
+        width: 335px;
+        height: 194px;
+        background-size: 100%;
+        border-radius: 12px;
+        margin: 0;
+      }
+
+      .button {
+        width: 142px;
+        height: 45px;
+
+        margin: 32px 0 0 32px;
+
+        background-color: #ffffff00;
+
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.94px;
+        letter-spacing: 0.46000000834465027px;
+
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+
+        &:hover {
+          cursor: pointer;
+          background: #ffffff26;
+        }
+
+        @include breakpoint(medium) {
+          width: 148px;
+        }
+
+        @include breakpoint(small) {
+          width: 148px;
+          height: 45px;
+        }
+
+        @include breakpoint(extra-small) {
+          height: 41px;
+          width: 148px;
+          margin-left: 16px;
+          margin-top: 34px;
+        }
+      }
+
+      .main__services-bgi {
+        width: 400px;
+        height: 192px;
+        top: 307;
+        left: 12px;
+
+        @include breakpoint(medium) {
+          width: 217px;
+          height: 101px;
+          top: 140px;
+          left: 197px;
+        }
+
+        @include breakpoint(small) {
+          width: 287px;
+          height: 131px;
+          top: 111px;
+          left: 372px;
+        }
+
+        @include breakpoint(extra-small) {
+          width: 149px;
+          height: 68px;
+          top: 126px;
+          left: 178px;
+        }
+      }
+    }
+
+    &-show {
+      grid-area: show;
+
+      width: 424px;
+      height: 250px;
+
+      position: relative;
+
+      margin-bottom: 12px;
+
+      background: url(../image/bgc_show.png);
+
+      @include breakpoint(medium) {
+        width: 420px;
+        height: 233px;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(small) {
+        width: 680px;
+        height: 233px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(extra-small) {
+        width: 335px;
+        height: 194px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      .button {
+        width: 180px;
+        height: 45px;
+
+        position: absolute;
+        top: 156px;
+        left: 32px;
+
+        z-index: 10;
+
+        background-color: #ffffff00;
+
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.94px;
+        letter-spacing: 0.46000000834465027px;
+
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+
+        &:hover {
+          cursor: pointer;
+          background: #ffffff26;
+        }
+
+        @include breakpoint(medium) {
+          width: 148px;
+          height: 45px;
+          top: 156px;
+          left: 32px;
+        }
+
+        @include breakpoint(small) {
+          width: 148px;
+          height: 45px;
+        }
+
+        @include breakpoint(extra-small) {
+          height: 41px;
+          width: 148px;
+          top: 137px;
+          left: 16px;
+        }
+      }
+
+      .main__services-svg {
+        position: absolute;
+
+        width: 195px;
+        height: 195px;
+        top: 55px;
+        left: 172px;
+
+        color: #121212;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+
+        @include breakpoint(small) {
+          display: none;
+        }
+
+        @include breakpoint(extra-small) {
+          display: none;
+        }
+      }
+
+      .main__services-bgi {
+        position: absolute;
+        z-index: 100;
+
+        width: 179px;
+        height: 118px;
+        top: 132px;
+        left: 245px;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+
+        @include breakpoint(small) {
+          display: none;
+        }
+
+        @include breakpoint(extra-small) {
+          display: none;
+        }
+      }
+
+      .main__services-bgi-mobile {
+        display: none;
+
+        @include breakpoint(medium) {
+          position: absolute;
+          display: block;
+
+          width: 217px;
+          height: 93px;
+        }
+
+        @include breakpoint(small) {
+          position: absolute;
+          display: block;
+
+          width: 260px;
+          height: 114px;
+          top: 116px;
+          left: 400px;
+        }
+
+        @include breakpoint(extra-small) {
+          position: absolute;
+          display: block;
+
+          width: 137px;
+          height: 62px;
+          top: 130px;
+          left: 198px;
+        }
+      }
+    }
+
+    &-reservation {
+      grid-area: reservation;
+
+      width: 424px;
+      height: 250px;
+
+      position: relative;
+
+      background: url(../image/bgc_reservation.png);
+
+      @include breakpoint(medium) {
+        width: 420px;
+        height: 233px;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(small) {
+        width: 680px;
+        height: 233px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(extra-small) {
+        width: 335px;
+        height: 194px;
+        border-radius: 12px;
+      }
+
+      .button {
+        width: 180px;
+        height: 45px;
+
+        margin: 32px 0 0 32px;
+
+        background-color: #ffffff00;
+
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.94px;
+        letter-spacing: 0.46000000834465027px;
+
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+
+        &:hover {
+          cursor: pointer;
+          background: #ffffff26;
+        }
+
+        @include breakpoint(medium) {
+          width: 148px;
+
+          margin: 54px 0 0 32px;
+        }
+
+        @include breakpoint(small) {
+          width: 148px;
+          height: 45px;
+          margin: 54px 0 0 32px;
+        }
+
+        @include breakpoint(extra-small) {
+          width: 148px;
+          height: 41px;
+          margin: 33px 0 0 16px;
+        }
+      }
+
+      .main__services-bgi {
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        top: 111px;
+        left: 285px;
+        scale: 1.23;
+        border-radius: 8px;
+
+        @include breakpoint(medium) {
+          width: 84px;
+          height: 80px;
+          top: 144px;
+          left: 300px;
+        }
+
+        @include breakpoint(small) {
+          width: 107px;
+          height: 105px;
+          top: 115px;
+          left: 519px;
+        }
+
+        @include breakpoint(extra-small) {
+          width: 56px;
+          height: 60px;
+          top: 126px;
+          left: 249px;
+        }
+      }
+
+      .main__services-info {
+        width: 295px;
+
+        @include breakpoint(medium) {
+          width: 306px;
+        }
+
+        @include breakpoint(small) {
+          width: 306px;
+        }
+
+        @include breakpoint(extra-small) {
+          width: 245px;
+        }
+      }
+    }
+
+    &-grade {
+      grid-area: grading;
+
+      width: 424px;
+      height: 512px;
+
+      position: relative;
+
+      background-image: url(../image/bgc_grade.png);
+
+      @include breakpoint(medium) {
+        width: 420px;
+        height: 233px;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(small) {
+        width: 680px;
+        height: 233px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      @include breakpoint(extra-small) {
+        width: 335px;
+        height: 194px;
+        background-size: 100%;
+        border-radius: 12px;
+      }
+
+      .main__services-info {
+        width: 323px;
+      }
+
+      .button {
+        width: 119px;
+        height: 45px;
+
+        margin: 32px 0 0 32px;
+
+        background-color: #ffffff00;
+
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.94px;
+        letter-spacing: 0.46000000834465027px;
+
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+
+        &:hover {
+          cursor: pointer;
+          background: #ffffff26;
+        }
+
+        @include breakpoint(medium) {
+          width: 148px;
+        }
+
+        @include breakpoint(small) {
+          width: 148px;
+          height: 45px;
+        }
+      }
+
+      .main__services-bgi {
+        position: absolute;
+        display: block;
+        width: 413px;
+        height: 261px;
+        top: 251px;
+        left: 0;
+        border-radius: 10px;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+
+        @include breakpoint(small) {
+          display: none;
+        }
+
+        @include breakpoint(extra-small) {
+          display: none;
+        }
+      }
+
+      .main__services-bgi-mobile {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+          position: absolute;
+          width: 208px;
+          height: 98px;
+          top: 137px;
+          left: 210px;
+        }
+
+        @include breakpoint(small) {
+          display: block;
+          position: absolute;
+          width: 228px;
+          height: 109px;
+          top: 124px;
+          left: 424px;
+        }
+
+        @include breakpoint(extra-small) {
+          display: block;
+          position: absolute;
+          width: 149px;
+          height: 68px;
+          top: 126px;
+          left: 178px;
+        }
+      }
+    }
+  }
+}

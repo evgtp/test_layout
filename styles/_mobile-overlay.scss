@@ -1,0 +1,17 @@
+.mobile-overlay {
+  margin: 0;
+  border: none;
+
+  &:modal {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    max-width: 300px;
+    min-height: 400px;
+  }
+
+  &__close-button-wrapper {
+    display: flex;
+    justify-content: end;
+  }
+}
